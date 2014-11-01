@@ -11,20 +11,48 @@
 
 <body>
 <div data-role="page" id="pageHome">
-  <div data-role="header">
-    <h1>Header</h1>
-  </div>
-  <div data-role="content">
-  <!--spacer--><div align="center">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><img src="icons/Logo.png" width="150"></p>
-
-  
-  </div><!--/spacer-->
-    <!--icons--><div align="center"> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> </div>
-    <div align="center"> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> </div><!--/icons-->
-  </div><!--/content--> 
+ <!--panel--><div data-role="panel" id="panelMenu">
+        <!-- panel content goes here -->
+    </div><!-- /panel -->
+  <div data-role="header"> </div>
+  <div data-role="content"> 
+    <!--Logo-->
+    <div align="center">
+      <p>&nbsp;</p>
+      <p><img src="icons/Logo.png" width="150"></p>
+    </div>
+    <!--/Logo--> 
+    <!--icons-->
+    <div align="center"> <a href="#panelMenu"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> </div>
+    <div align="center"> <!--popup button--><a href="#popupMenu" data-rel="popup" data-transition="slideup"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> </div><!--/icons-->
+     <!--popup code--><div data-role="popup" id="popupMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Choose a Dish</li>
+            <li><a href="#beef-popup">Beef</a></li>
+            <li><a href="#">Lamb</a></li>
+            <li><a href="#">Pork</a></li>
+            <li><a href="#">Fish</a></li>
+            <li><a href="#">Poultry</a></li>
+        </ul>
 </div>
+  </div><!--/content-->
+   
+</div><!--/Homepage-->
+ <!--Beef popup--><div data-role="page" id="beef-popup">
+            <div data-role="content">
+            <img src="images/beef.png" width="100%" />
+            <div align="center"><a href="index.html" data-role="button" data-mini="true" style="width:40%">Close</a></div>
+            <p>&nbsp; &nbsp; &nbsp;Cow with natural markings!!</p>
+            <p>I never saw a Purple Cow,
+I never hope to see one;
+But I can tell you, anyhow,
+I'd rather see than be one</p>
+
+<p>Ah, yes, I wrote the "Purple Cow"—
+I'm Sorry, now, I wrote it;
+But I can tell you Anyhow
+I'll Kill you if you Quote it!</p>
+            </div><!--/beef popup-->
+    </div>
 </body>
 </html>

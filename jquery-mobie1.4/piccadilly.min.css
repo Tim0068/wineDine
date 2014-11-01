@@ -228,3 +228,9 @@ html .ui-alt-icon .ui-radio-off:after {
 	border-bottom-color: #903;
 	border-left-color: #903;
 }
+#notes {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #666;
+	padding: 1em;
+}

@@ -49,47 +49,43 @@
     </div>
     <!--/Logo--> 
     <!--icons-->
-    <div align="center"> <a href="#panelMenu"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/icon2.png" width="75" height="75" id="icon"/></a> </div>
-    <div align="center"> <!--popup button--><a href="#popupMenu" data-rel="popup" data-transition="slideup"><img src="icons/icon3.jpg" width="75" height="75" id="icon"/></a> <a href="#pageWheel"><img src="icons/icon4.jpg"width="75" height="75" id="icon"/></a> </div><!--/icons-->
-     <!--popup code--><div data-role="popup" id="popupMenu" data-theme="b">
-        <ul data-role="listview" data-inset="true" style="min-width:210px;">
-            <li data-role="list-divider">Choose a Dish</li>
-            <li><a href="#beef-popup">Beef</a></li>
-            <li><a href="#">Lamb</a></li>
-            <li><a href="#">Pork</a></li>
-            <li><a href="#">Fish</a></li>
-            <li><a href="#">Poultry</a></li>
-        </ul>
-</div>
+    <div align="center"> <a href="#panelMenu"><img src="icons/Untitled-1.png" width="75" height="75" id="icon"/></a> <a href="#panelMenu"><img src="icons/icon2.png" width="75" height="75" id="icon"/></a> </div>
+    <div align="center"> <!--popup button--><a href="#panelMenu"><img src="icons/icon3.jpg" width="75" height="75" id="icon"/></a> <a href="#panelMenu"><img src="icons/icon4.jpg"width="75" height="75" id="icon"/></a> </div><!--/icons-->
+     
   </div><!--/content-->
    
 </div><!--/Homepage-->
 <!--Food Page--><div data-role="page" id="pageFood">
-  <div data-role="header">
+
+  <div data-role="header" >
     
   <img src="images/foodWine.png" width="100%"></div>
-  <div data-role="content">
-  <div align="center"> <!--popup button--><a href="#popupFood" data-rel="popup" data-transition="slideup"><img src="icons/icon3.jpg" width="75" height="75" id="icon"/></a></div>
-  <div id="notes">
-  <p>Food and wine go together because of the complements and contrasts they offer to each other. Food tastes better with wine because wine offers another set of aromas, flavors, and textures that act as a foil to the aromas, flavors, and textures of the food being eaten. </p>
-<p>Think of the first bite you take of a slice of rare roast prime rib of beef. With that first bite you smell the rich aromas, taste the full flavor of the meat, and experience the full range of tactile sensations in your mouth. While the second bite is good, it can't be as good as the first because your nose and mouth are already used to the sensations the roast beef provides.</p>
+<div id="notes">
+  <div data-role="navbar">
+  <ul>
+  <li><a href="#popupMenu"   data-role="button" data-mini = "true" data-rel="popup" data-transition="slideup">Dish Selection</a></li>
+  <li><a href="index.html" data-role="button" data-mini="true">Home</a></li>
+  </ul>
   </div>
-  <!--popup code--><div data-role="popup" id="popupFood" data-theme="b">
+<div data-role="popup" id="popupMenu" data-theme="b">
         <ul data-role="listview" data-inset="true" style="min-width:210px;">
-            <li data-role="list-divider">Choose a Dish</li>
-            <li><a href="#beef-popup">Beef</a></li>
+            <li data-role="list-divider">Please select a dish</li>
+            <li><a href="#beef-popup" data-transition="slideup">Beef</a></li>
             <li><a href="#">Lamb</a></li>
-            <li><a href="#">Pork</a></li>
-            <li><a href="#">Fish</a></li>
             <li><a href="#">Poultry</a></li>
+            <li><a href="#">Fish</a></li>
         </ul>
 </div>
+  <p>Food and wine go together because of the complements and contrasts they offer to each other. Food tastes better with wine because wine offers another set of aromas, flavors, and textures that act as a foil to the aromas, flavors, and textures of the food being eaten. </p>
+<p>Think of the first bite you take of a slice of rare roast prime rib of beef. With that first bite you smell the rich aromas, taste the full flavor of the meat, and experience the full range of tactile sensations in your mouth. While the second bite is good, it can't be as good as the first because your nose and mouth are already used to the sensations the roast beef provides.</p>
+</div>
+  
   </div>
 </div><!--/page food-->
 <!--Beef popup--><div data-role="page" id="beef-popup">
             <div data-role="content">
             <img src="images/beef.png" width="100%" />
-            <div align="center"><a href="#pageFood" data-role="button" data-mini="true" style="width:40%">Close</a></div>
+            <div align="center"><a href="#pageFood"  data-transition="slidedown" data-role="button" data-mini="true" style="width:40%">Close</a></div>
            <div id="notes"><p> For very young red wines, cook the beef rarer than you might otherwise. The extra fat and protein will limit the harshness of young tannins.</p>
 <p>With well aged red wines, cook the beef more than you normally would. Very rare beef can overwhelm the subtle complexity that are the desireable result of proper aging.</p>
 <p>Veal may be beef but it calls for different wines. Look at Pinot Noir or Syrah (Shiraz) for lower tannin levels and a better match.</p>
@@ -97,5 +93,11 @@
 Roasts and other cuts of beef that are cooked as multiple servings (rather than indivually cooked cuts like steak) develop less char per serving and match better with wines of more age or lower tannin.</p>
             </div><!--/beef popup-->
     </div>
+            <div data-role="page" id="pageWheel">
+              <div data-role="header">
+                <h1>Header</h1>
+              </div>
+              <div data-role="content">Content</div>
+            </div>
 </body>
 </html>

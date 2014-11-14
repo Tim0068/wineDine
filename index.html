@@ -15,7 +15,7 @@
         <!-- panel content goes here -->
         <ul data-role="listview" data-inset="true">
       <p>
-      <li><a href="#tasting"><img src="icons/cellar.png">
+      <li><a href="#pagePicker"><img src="icons/cellar.png">
         <h2>Tasting</h2>
         <p>Smells &amp; Tastes.</p>
         </a></li>
@@ -33,7 +33,7 @@
         </a></li>
       </p>
       <p>
-      <li><a href="#wineTrivia"><img src="icons/sunset.png">
+      <li><a href="#pageTrivia"><img src="icons/sunset.png">
         <h2>Trivia</h2>
         <p>Wine Ed</p>
         </a></li>
@@ -93,11 +93,56 @@
 Roasts and other cuts of beef that are cooked as multiple servings (rather than indivually cooked cuts like steak) develop less char per serving and match better with wines of more age or lower tannin.</p>
             </div><!--/beef popup-->
     </div>
-            <div data-role="page" id="pageWheel">
+    </div>
+            <div data-role="page" id="pagePicker">
+              <div data-role="header">
+                <h1>pagePicker</h1>
+              </div>
+               <div data-role="navbar">
+  <ul>
+  <li><a href="#wineColourMenu"   data-role="button" data-mini = "true" data-rel="popup" data-transition="slideup">Wine Wheel</a></li>
+  <li><a href="index.html" data-role="button" data-mini="true">Home</a></li>
+  </ul>
+  </div>
+<div data-role="popup" id="wineColourMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Please select a dish</li>
+            <li><a href="#">Red</a></li>
+            <li><a href="#">White</a></li>
+            <li><a href="#">Yellow</a></li>
+            <li><a href="#">Clear</a></li>
+        </ul>
+</div>
+              
+            Content</div><!--/content-->
+            </div>
+<div data-role="page" id="pageTrivia">
               <div data-role="header">
                 <h1>Header</h1>
               </div>
-              <div data-role="content">Content</div>
-            </div>
+              <div data-role="navbar">
+  <ul>
+  <li><a href="#pagePicker"   data-role="button" data-mini = "true"  data-transition="slideup">Wine Wheel</a></li>
+  <li><a href="index.html" data-role="button" data-mini="true">Home</a></li>
+  </ul>
+  </div>
+              <div data-role="content">
+                <div data-role="collapsible-set">
+                  <div data-role="collapsible">
+                    <h3>Shiraz</h3>
+                    <p>Content</p>
+                  </div>
+                  <div data-role="collapsible" data-collapsed="true">
+                    <h3>Cabernet</h3>
+                    <p>Content</p>
+                  </div>
+                  <div data-role="collapsible" data-collapsed="true">
+                    <h3>Cab / Sav</h3>
+                    <p>Content</p>
+                  </div>
+                </div>
+  </div>
+            
+</div>
 </body>
 </html>

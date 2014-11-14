@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <div data-role="page" id="pageHome">
  <!--panel--><div data-role="panel" id="panelMenu">
         <!-- panel content goes here -->
@@ -94,27 +95,64 @@ Roasts and other cuts of beef that are cooked as multiple servings (rather than 
             </div><!--/beef popup-->
     </div>
     </div>
-            <div data-role="page" id="pagePicker">
+<div data-role="page" id="pagePicker">
               <div data-role="header">
-                <h1>pagePicker</h1>
-              </div>
+                <h1>Wine Wheel</h1>
+              </div><img src="images/Wine-Tasting-Cellar-Door-McWilliams-600x332.png" width=100%>
                <div data-role="navbar">
   <ul>
-  <li><a href="#wineColourMenu"   data-role="button" data-mini = "true" data-rel="popup" data-transition="slideup">Wine Wheel</a></li>
+  <li><a href="#wineColourMenu"    data-role="button" data-mini = "true" data-rel="popup" data-transition="slideup">Wine Wheel</a></li>
   <li><a href="index.html" data-role="button" data-mini="true">Home</a></li>
   </ul>
   </div>
+  <!--wine colour popup--------------------------------------------------------------------------------------------------->
 <div data-role="popup" id="wineColourMenu" data-theme="b">
-        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="wineColour">
             <li data-role="list-divider">Please select a dish</li>
-            <li><a href="#">Red</a></li>
-            <li><a href="#">White</a></li>
-            <li><a href="#">Yellow</a></li>
-            <li><a href="#">Clear</a></li>
+            <li><a href="Red">Red</a></li>
+            <li><a href="White">White</a></li>
+            <li><a href="Yellow">Yellow</a></li>
+            <li><a href="Clear">Clear</a></li>
         </ul>
 </div>
-              
-            Content</div><!--/content-->
+<!--bubbles popup------------------------------------------------------------------------------------------------------------>
+          <div data-role="popup" id="bubblesChoice" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="bubbles">
+            <li data-role="list-divider">Are there bubbles in the wine?</li>
+            <li><a href="Yes">Yes</a></li>
+            <li><a href="No">No</a></li>
+        </ul>
+</div>  
+
+<!--First Aroma popup------------------------------------------------------------------------------------------------------------>
+          <div data-role="popup" id="firstAromaMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="firstAroma">
+            <li data-role="list-divider">Are there bubbles in the wine?</li>
+            <li><a href="Leather">Leather</a></li>
+            <li><a href="Turps">Turps</a></li>
+        </ul>
+</div>   
+<!--Second Aroma popup------------------------------------------------------------------------------------------------------------>
+          <div data-role="popup" id="secondAromaMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="secondAroma">
+            <li data-role="list-divider">Are there bubbles in the wine?</li>
+            <li><a href="Leather">Leather</a></li>
+            <li><a href="Turps">Turps</a></li>
+        </ul>
+</div>         
+    
+  <!--grid for buttons---------------------------------------------------------------------------------------------------------->
+  <div class="ui-grid-a" id="buttonGrid">
+    <div class="ui-block-a"><a href="#wineColourMenu"    id="wineColourButton" data-role="button" data-rel="popup">Colour</a></div>
+    <div class="ui-block-b"><a href="#bubblesChoice"    id="bubblesButton" data-role="button" data-rel="popup">Bubbles</a></div>
+    <div class="ui-block-a"  >First Aroma</div>
+    <div class="ui-block-b"><a href="#firstAromaMenu"    id="firstAromaButton" data-role="button" data-rel="popup">Aroma 1</a></div>
+    <div class="ui-block-a">Second Aroma</div>
+      <div class="ui-block-b"><a href="#secondAromaMenu"    id="secondAromaButton" data-role="button" data-rel="popup">Aroma 2</a></div>
+    
+  </div>
+  <!--/button grid---------------------------------------------------------------------------------------------------------------->
+</div><!--/content-->
             </div>
 <div data-role="page" id="pageTrivia">
               <div data-role="header">
@@ -122,9 +160,10 @@ Roasts and other cuts of beef that are cooked as multiple servings (rather than 
               </div>
               <div data-role="navbar">
   <ul>
-  <li><a href="#pagePicker"   data-role="button" data-mini = "true"  data-transition="slideup">Wine Wheel</a></li>
+  <li><a href="#pagePicker"   data-role="button" data-mini = "true"   id="colourpopupMenu"  data-customattr="button value" data-transition="slideup">Wine Wheel</a></li>
   <li><a href="index.html" data-role="button" data-mini="true">Home</a></li>
   </ul>
+  <img src="images/wineTastingGroups.jpg" width=100%>
   </div>
               <div data-role="content">
                 <div data-role="collapsible-set">
@@ -142,7 +181,37 @@ Roasts and other cuts of beef that are cooked as multiple servings (rather than 
                   </div>
                 </div>
   </div>
-            
+      
 </div>
+<!--This script gets value from popup click-->
+<script type="text/javascript">
+    $("#wineColourMenu a").bind("click", function() {
+        var wineColour = $( this ).attr( 'href' );
+		$("#wineColourButton").text(wineColour);
+		$("#wineColourMenu").popup("close");
+        return false;
+    });
+	
+	$("#bubblesChoice a").bind("click", function() {
+        var bubblesChoice = $( this ).attr( 'href' );
+		$("#bubblesButton").text(bubblesChoice);
+		$("#bubblesChoice").popup("close");
+        return false;
+    });
+	
+	$("#firstAroma a").bind("click", function() {
+        var firstAroma = $( this ).attr( 'href' );
+		$("#firstAromaButton").text(firstAroma);
+		$("#firstAromaMenu").popup("close");
+        return false;
+    });
+	
+	$("#secondAroma a").bind("click", function() {
+        var secondAroma = $( this ).attr( 'href' );
+		$("#secondAromaButton").text(secondAroma);
+		$("#secondAromaMenu").popup("close");
+        return false;
+    });
+</script>
 </body>
 </html>

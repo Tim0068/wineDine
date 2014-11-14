@@ -234,3 +234,8 @@ html .ui-alt-icon .ui-radio-off:after {
 	color: #666;
 	padding: 1em;
 }
+#pagePicker #buttonGrid {
+}
+#pagePicker #buttonGrid .ui-block-a {
+	vertical-align: middle;
+}

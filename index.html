@@ -127,28 +127,77 @@ Roasts and other cuts of beef that are cooked as multiple servings (rather than 
 <!--First Aroma popup------------------------------------------------------------------------------------------------------------>
           <div data-role="popup" id="firstAromaMenu" data-theme="b">
         <ul data-role="listview" data-inset="true" style="min-width:210px;" id="firstAroma">
-            <li data-role="list-divider">Are there bubbles in the wine?</li>
-            <li><a href="Leather">Leather</a></li>
-            <li><a href="Turps">Turps</a></li>
+            <li data-role="list-divider">Aroma Characteristics?</li>
+            <li><a href="Black Olives">Black Olives</a></li>
+            <li><a href="White Pepper">White Pepper</a></li>
+            <li><a href="Black Pepper">Black Pepper</a></li>
+            <li><a href="Spice">Spice</a></li>
+            <li><a href="Raspberry">Raspberry</a></li>
+            <li><a href="Red Current">Red Current</a></li>
+            <li><a href="Mulberry">Mulberry</a></li>
+            <li><a href="Blackberry">Black Berry</a></li>
+            <li><a href="Briarr">Briar</a></li>
+            <li><a href="Plum">Plum</a></li>
         </ul>
 </div>   
-<!--Second Aroma popup------------------------------------------------------------------------------------------------------------>
+<!--Second Aroma popup menu------------------------------------------------------------------------------------------------------>
           <div data-role="popup" id="secondAromaMenu" data-theme="b">
         <ul data-role="listview" data-inset="true" style="min-width:210px;" id="secondAroma">
             <li data-role="list-divider">Are there bubbles in the wine?</li>
-            <li><a href="Leather">Leather</a></li>
-            <li><a href="Turps">Turps</a></li>
+            <li><a href="Leather">Black Olives</a></li>
+            <li><a href="Turps">White Pepper</a></li>
+            <li><a href="Black Pepper">Black Pepper</a></li>
+            <li><a href="Spice">Spice</a></li>
+            <li><a href="Raspberry">Raspberry</a></li>
+            <li><a href="Red Current">Red Current</a></li>
+            <li><a href="Mulberry">Mulberry</a></li>
+            <li><a href="Blackberry">Black Berry</a></li>
+            <li><a href="Briarr">Briar</a></li>
+            <li><a href="Plum">Plum</a></li>
+        </ul>
+</div>         
+
+<!--Third  Aroma popup menu------------------------------------------------------------------------------------------------------>
+          <div data-role="popup" id="thirdAromaMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="thirdAroma">
+            <li data-role="list-divider">Are there bubbles in the wine?</li>
+            <li><a href="Leather">Black Olives</a></li>
+            <li><a href="Turps">White Pepper</a></li>
+            <li><a href="Black Pepper">Black Pepper</a></li>
+            <li><a href="Spice">Spice</a></li>
+            <li><a href="Raspberry">Raspberry</a></li>
+            <li><a href="Red Current">Red Current</a></li>
+            <li><a href="Mulberry">Mulberry</a></li>
+            <li><a href="Blackberry">Black Berry</a></li>
+            <li><a href="Briarr">Briar</a></li>
+            <li><a href="Plum">Plum</a></li>
         </ul>
 </div>         
     
+    <!--Fourth  Aroma popup menu------------------------------------------------------------------------------------------------------>
+          <div data-role="popup" id="fourthAromaMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" id="fourthAroma">
+            <li data-role="list-divider">Are there bubbles in the wine?</li>
+            <li><a href="Leather">Black Olives</a></li>
+            <li><a href="Turps">White Pepper</a></li>
+            <li><a href="Black Pepper">Black Pepper</a></li>
+            <li><a href="Spice">Spice</a></li>
+            <li><a href="Raspberry">Raspberry</a></li>
+            <li><a href="Red Current">Red Current</a></li>
+            <li><a href="Mulberry">Mulberry</a></li>
+            <li><a href="Blackberry">Black Berry</a></li>
+            <li><a href="Briarr">Briar</a></li>
+            <li><a href="Plum">Plum</a></li>
+        </ul>
+</div>         
   <!--grid for buttons---------------------------------------------------------------------------------------------------------->
   <div class="ui-grid-a" id="buttonGrid">
     <div class="ui-block-a"><a href="#wineColourMenu"    id="wineColourButton" data-role="button" data-rel="popup">Colour</a></div>
     <div class="ui-block-b"><a href="#bubblesChoice"    id="bubblesButton" data-role="button" data-rel="popup">Bubbles</a></div>
-    <div class="ui-block-a"  >First Aroma</div>
-    <div class="ui-block-b"><a href="#firstAromaMenu"    id="firstAromaButton" data-role="button" data-rel="popup">Aroma 1</a></div>
-    <div class="ui-block-a">Second Aroma</div>
-      <div class="ui-block-b"><a href="#secondAromaMenu"    id="secondAromaButton" data-role="button" data-rel="popup">Aroma 2</a></div>
+    <div class="ui-block-a"  ><a href="#firstAromaMenu"    id="firstAromaButton" data-role="button" data-rel="popup">Aroma 1</a></div>
+    <div class="ui-block-b"><a href="#secondAromaMenu"    id="secondAromaButton" data-role="button" data-rel="popup">Aroma 2</a></div>
+    <div class="ui-block-a"><a href="#thirdAromaMenu"    id="thirdAromaButton" data-role="button" data-rel="popup">Aroma 3</a></div>
+      <div class="ui-block-b"><a href="#fourthAromaMenu"    id="fourthAromaButton" data-role="button" data-rel="popup">Aroma 4</a></div>
     
   </div>
   <!--/button grid---------------------------------------------------------------------------------------------------------------->
@@ -210,6 +259,20 @@ Roasts and other cuts of beef that are cooked as multiple servings (rather than 
         var secondAroma = $( this ).attr( 'href' );
 		$("#secondAromaButton").text(secondAroma);
 		$("#secondAromaMenu").popup("close");
+        return false;
+    });
+	
+	$("#thirdAroma a").bind("click", function() {
+        var thirdAroma = $( this ).attr( 'href' );
+		$("#thirdAromaButton").text(thirdAroma);
+		$("#thirdAromaMenu").popup("close");
+        return false;
+    });
+	
+	$("#fourthAroma a").bind("click", function() {
+        var fourthAroma = $( this ).attr( 'href' );
+		$("#fourthAromaButton").text(fourthAroma);
+		$("#fourthAromaMenu").popup("close");
         return false;
     });
 </script>
